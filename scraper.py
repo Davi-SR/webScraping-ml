@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import datetime
+from load import carregar_para_postgres
+
 
 # Método de fazer requisição
 def make_request(url, headers):
@@ -84,3 +87,9 @@ if __name__ == "__main__":
 
     # Salva o DataFrame LIMPO em um novo CSV
     df_produtos.to_csv('produtos_limpos_ml.csv', index=False)
+
+    # Criar coluna com Data de carregamento dos produtos
+    df_produtos['data_coleta'] = datetime.datetime.now()
+
+    # Carregar dados para PostgreSQL
+    carregar_para_postgres(df_produtos, 'anuncios_ps5')
