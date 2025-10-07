@@ -95,13 +95,11 @@ python scraper.py
 Ao final da execução, os dados estarão na sua tabela do PostgreSQL e um arquivo CSV de backup será gerado.
 
 ## 📁 Estrutura do Projeto
-.
-├── scraper.py         # Script principal que orquestra todo o processo de ETL
-├── load.py            # Módulo com a função de carga para o PostgreSQL
-├── .env               # Arquivo local com as credenciais (ignorado pelo Git)
-├── .gitignore         # Arquivo que especifica o que o Git deve ignorar
-├── requirements.txt   # Lista de dependências Python do projeto
-└── README.md          # Esta documentação
+| | |
+| :--- | :--- |
+| 📄 `scraper.py` | 🐍 `requirements.txt` |
+| 📦 `load.py` | 🛡️ `.gitignore` |
+| 🔑 `.env` | 📖 `README.md` |
 
 
 Desenvolvido com entusiasmo por Davi Silva Ramos.
